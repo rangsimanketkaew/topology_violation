@@ -155,9 +155,9 @@ while numFile < N :
     c.write("Number of Event = " "%s \n" % count)
 
 total = sum(sum_count)
-c.write("Toal of Event = " "%s \n" % total)
+c.write("Total of Event = " "%s \n" % total)
 
-print " Toal of Event = " "%s" % total
+print " Total of Event = " "%s" % total
 
 print " ------ Normal termination ------ "
 
