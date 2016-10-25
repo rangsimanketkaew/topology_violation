@@ -1,7 +1,8 @@
 #!/bin/bash
 
-#cd .
+# Use this script to run your calculation ^_^
 
+#cd .
 #test & example
 #nohup mpirun -np 4 python 1.py &
 #wait
