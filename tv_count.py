@@ -1,12 +1,14 @@
-## Topology Violation counting, version.4 edit debugging
+## Polymer structure analysis tool
+## --> Topology Violation counting, version.1 (debugging)
 ## The calculation of the topology violation of the polymer system
-## The code has been writen by Rangsiman Ketkaew, Computational Chemistry Research Unit, Thammasat U., Thailand(Summer 2016)
+## The code is writen by Rangsiman Ketkaew, Computational Chemistry Research Unit, Thammasat U., Thailand (Oct 2016)
 ## step*.txt is the file that include the coordinate data of fictitious beads during simulation 
 
 #import scientific things from python
 import numpy as np
 import math
 
+#You can (must) change N and B as integer number
 N = 5 # Number of files ## <--- Double check before submit # The file has to be in the same place with the input file
 B = 24 # Number of Bead/Particle ## <--- Double check before submit
 
@@ -163,4 +165,3 @@ print " -------- See You Again --------- "
 
 
 ## The computation has done ##
-
