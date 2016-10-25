@@ -11,7 +11,7 @@ README_BEFORE_USE.txt
 or	
 	$ chmod +x tv_script.py
 
-2.Store the input file (coor.xyz) in the samep place with script.py 
+2.Store the input file (coor.xyz) at the same place of script.py 
 
 3.Change the name of input file as a format of " step*.txt "
 
