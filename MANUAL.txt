@@ -1,11 +1,22 @@
 README_BEFORE_USE.txt
 
-#Polymer Structure Analysis
-#Topology Violation counting, count the number of topology violation in polymer system
+## Polymer Structure Analysis Tool
+## --> Coding Script for Counting The Number of Topology Violation, version 1.1 (Oct 2016, debugging)
+## --> This script is improved interface for general user.
+## --> The code is writen by Rangsiman Ketkaew, Computational Chemistry Research Unit, Thammasat U., Thailand
+## --> Contact me for what you want to see in next project, rangsiman1993(at)gmail(dot)com
 
+*** I suggest you to do everything on LINUX-based OS. ***
+*** I suggest you to run the tv_count.py script with incorporating MPI. ***
 
 # -----------------------------------------------------------------------------------#
-1.Excute script using command following
+0.Preparing files:
+	You can use the script 'remove_nLine.sh' for converting the format of coor file
+	to the new format that suitable with tv_count script.
+	
+	$ ./remove_nLine.sh
+
+1.Excute script using command following:
 
 	$ chmod 755 tv_script.py
 or	
@@ -13,29 +24,26 @@ or
 
 2.Store the input file (coor.xyz) at the same place of script.py 
 
+	$ mv file destination_folder (move file to any folder)
+
 3.Change the name of input file as a format of " step*.txt "
 
 	$ mv file1 file2 (rename)
 
-Eventually, you should have successive files like this
+eventually, you should have successive files like this on your folder
 
-	$ step0.txt step1.txt step2.txt step3.txt ... and so forth.
+	$ step0.txt step1.txt step2.txt step3.txt ... and so forth
 	
 3.Run script using command following
 
+	$ ./tv_script &
+or
 	$ nohup ./tv_script.sh &
 or
 	$ nohup sh tv_script.sh &
-
-*** You can use MPIrun incorporate with the script
-
-	$ vi tv_script.sh
-
-	$ mpirun -np N tv_count.py &
-
-N = number of processors
 
 # -----------------------------------------------------------------------------------#
 
 Enjoy Chemistry Things !!!
 
+RK
