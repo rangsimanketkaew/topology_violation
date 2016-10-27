@@ -1,26 +1,15 @@
 #!/bin/bash
 
-# Use this script to run your calculation ^_^
-
-#cd .
-#test & example
-#nohup mpirun -np 4 python 1.py &
-#wait
-#nohup mpirun -np 4 python 2.py &
-
-#echo "Job done"
-
 #-----------------------------------------#
-
 cd .
-nohup mpirun -np 4 python tv_count.py &
+# nohup mpirun -np N python tv_count.py &
+# where N is the number of the processor for MPI (N = positive integer, says, N=4)
+nohup mpirun -np 1 python tv_count.py &
 wait
-mv -f ./*output.txt ./output
+mv -f ./*output.txt ./output # Pleae create output folder beforeward
 wait
-mv -f ./count.txt ./count
+mv -f ./count.txt ./count # Please create count folder beforeward
 
-#You can change number of processor from 4 to N (N=positive integer)
 #-----------------------------------------#
 
 echo "Job done"
-
