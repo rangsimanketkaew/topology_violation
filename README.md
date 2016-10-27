@@ -1,5 +1,5 @@
 # Computational Polymer project
-This repository is created based-on motivation of Thailand Computationl Chemistry Challenge by UBE.
+This repository is created based-on motivation of project of Thailand Computationl Chemistry Challenge by UBE.
 
 # tv_counting
 tv_counting is Topology Violation analysis tool for post-analysis of polymer structure which is simulated from molecular dynamics program. the tv_count.py script can be flexibly employed on interface with the general trajectory or dump files of MD program, says, Gromacs, Amber, LAMMPS programs, or even typical coordinate (xyz format) file.
