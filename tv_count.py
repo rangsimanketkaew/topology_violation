@@ -1,8 +1,8 @@
 ## Polymer Structure Analysis Tool
-## --> Coding Script for Counting The Number of Topology Violation, version 1.1 (Oct 2016, debugging)
+## --> Coding script for counting the number of event of topology violation, version 1.1 (Oct 2016, debugging).
 ## --> This script is improved interface for general user.
-## --> The code is writen by Rangsiman Ketkaew, Computational Chemistry Research Unit, Thammasat U., Thailand
-## --> Contact me for what you want to see in next project, rangsiman1993(at)gmail(dot)com
+## --> The code is writen by Rangsiman Ketkaew, Computational Chemistry Research Unit, Thammasat U., Thailand.
+## --> Contact me for what you want to see in next project, rangsiman1993(at)gmail(dot)com .
 
 import numpy as np
 import math
