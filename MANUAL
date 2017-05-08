@@ -1,0 +1,78 @@
+=====================
+| README_BEFORE_USE |
+=====================
+Python code to count the number of Topology Violation, version 1.1 (Oct 2016, debugging) 
+Writen by Rangsiman Ketkaew, student in Chemistry at Computational Chemistry Research Unit
+Thammasat University, Pathum Thani, Thailand. Contact me: rangsiman1993(at)gmail(dot)com
+
+===============
+| tv_counting |
+===============
+"Polymer Structure Analysis Tool": tv_counting is a python code that used to be a 
+post-analysis tool for polymer simulation by counting the number of event of polymer 
+chain crossing (topology violation or TV) which have been simulated with the coarse-graining 
+model. The script can be flexibly employed on interface with the general trajectory or 
+dump files those are printed out by several molecular dynamics simulation programs such as 
+Gromacs, Amber, and LAMMPS programs. As long as you have the typical coordinate 
+of polymer in XYZ format, you could this script to analyse your polymeric system.
+
+=========================
+| Coarse-graining model |
+=========================
+Coarse grained simulation (CG) is one of the mesoscale simulation technique. The concept of CG 
+is trying to reduce the degree of freedom of particle by grouping the fragment of molecule as 
+an united atom (called bead). That means the million atoms in system will become to the new 
+particles which has the degree of freedom lower than the old one. I also strongly suggest you 
+to read the definition of CG if you are interested in wikipedia. This model is a promising 
+technique that many computational chemists has waited. It is fast more than Molecular Dynamics 
+simulation, whereas provides the accurate results and reasonably compared to experimental evidence.
+
+===========
+| Warning |
+===========
+(1) I suggest you to do everything on LINUX-based OS. ***
+(2) I suggest you to run the tv_count.py script with incorporating MPI. ***
+
+=========
+| Usage |
+=========
+Step by step of how to use the remove_nLine and tv_counting.
+# ============================================================================================ #
+====> 0 <====
+        Preparing files:
+	You can use the script 'remove_nLine.sh' for converting the format of coor file
+	to the new format that suitable with tv_count script.
+	
+	$ ./remove_nLine.sh
+
+====> 1 <====
+        Excute script using command following:
+
+	$ chmod 755 tv_script.py
+      or	
+	$ chmod +x tv_script.py
+
+====> 2 <====
+        Store the input file (coor.xyz) at the same place of script.py 
+
+	$ mv file destination_folder (move file to any folder)
+
+====> 3 <====
+        Change the name of input file as a format of " step*.txt "
+
+	$ mv file1 file2 (rename)
+
+eventually, you should have successive files like this on your folder
+
+	$ step0.txt step1.txt step2.txt step3.txt ... and so forth
+	
+====> 4 <====
+        Run script using command following
+
+	$ ./tv_script &
+      or
+	$ nohup ./tv_script.sh &
+      or
+	$ nohup sh tv_script.sh &
+
+# ============================================================================================ #
