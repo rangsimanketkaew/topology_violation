@@ -7,11 +7,30 @@ Coarse grained simulation (CG) is one of the mesoscale simulation technique. The
 # remove_nLine
 The remove_nLIne bash script is used to generate/adjust the format of xyz coordinate to suitably work with tv_count.py script afterward. Please be careful in using both of scripts, you can also learn what the proper format of coordinate by seeing test files in this repository.
 
+# Usage
+I strongly stuggest you to study the topology violation and its concept first which help you to very fast to understand tv_counting clearly. </br>
+* **tv_counting:**
+
+Single core
+```
+python tv_count.py
+```
+Multicore
+```
+mpirun -np N python tv_count.py
+```
+where N = number of CPUs
+
+* **remove_nLine:**
+```
+./remove_nLine.sh
+```
+
 ## Application
 You can find the application of topology violation analysis in the research article of THE JOURNAL OF CHEMICAL PHYSICS136, 134903 (2012) published by Timothy W Sirk et al. [http://dx.doi.org/10.1063/1.3698476]. Moreover, I personally suggest you to read LAMMPS manual about Dissipative Particle Dynamics (DPD) model and Segmental Repulsive Potential (SRP), these are the well-known and widely used coarse grained simulation.
 
 ## Motivation of Project
-2016 Thailand Computationl Chemistry Challenge by UBE.
+2016 Thailand Computational Chemistry Challenge by UBE.
 
 ## Contact info
 Please send your question or comment ot suggestion to me by rangsiman1993(at)gmail.com or visit https://nuttvichakarn.wordpress.com/ and https://sites.google.com/site/compchem403/home
