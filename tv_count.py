@@ -1,8 +1,9 @@
-## Polymer Structure Analysis Tool
-## --> Coding script for counting the number of event of topology violation, version 1.1 (Oct 2016, debugging).
-## --> This script is improved interface for general user.
-## --> The code is writen by Rangsiman Ketkaew, Computational Chemistry Research Unit, Thammasat U., Thailand.
-## --> Contact me for what you want to see in next project, rangsiman1993(at)gmail(dot)com .
+# Python code to count the number of Topology Violation. Version 1.1, 17 October 2016
+# Writen by Rangsiman Ketkaew, student in Chemistry at Computational Chemistry Research Unit
+# Thammasat University, Pathum Thani, Thailand. Contact me: rangsiman1993(at)gmail(dot)com
+# =================================
+# | PLEASE READ MANUAL BEFORE USE |
+# =================================
 
 import numpy as np
 import math
@@ -19,6 +20,8 @@ import math
 
 N = 10 # Number of coor file ## <--- Need to check before submit
 B = 2145 # Number of Bead/Molecule ## <--- Need to check before submit
+
+# ---------------------------------------------------------------------------------------------- #
 
 def findDist(x,y):
     delta = np.subtract(x,y)
@@ -161,9 +164,5 @@ total = sum(sum_count)
 c.write("Total of Event = " "%s \n" % total)
 
 print " Total of Event = " "%s" % total
-
-print " ------ Normal termination ------ "
-
-print " -------- See You Again --------- "
-
-## The computation has done ##
+print " ------ The Computation has Done: Normal termination ------ "
+print " ---------------------- See You Again --------------------- "
