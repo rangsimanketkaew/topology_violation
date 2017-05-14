@@ -18,6 +18,7 @@ print ("							\n\
 !    Student in Computational Chemistry 			\n\
 !    Computational Chemistry Research Unit (CCRU)               \n\
 !    Department of Chemistry, Faculty of Science and Technology \n\
+!    Thammasat University, Pathum Thani, Thailand               \n\
 ! 							        \n\
 ! <> E-mail : rangsiman1993@gmail.com			        \n\
 !    Website: https://sites.google.com/site/compchem403/	\n\
