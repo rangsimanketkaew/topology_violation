@@ -1,12 +1,32 @@
-# Python code to count the number of Topology Violation. Version 1.1, 17 October 2016
-# Writen by Rangsiman Ketkaew, student in Chemistry at Computational Chemistry Research Unit
-# Thammasat University, Pathum Thani, Thailand. Contact me: rangsiman1993(at)gmail(dot)com
-# =================================
-# | PLEASE READ MANUAL BEFORE USE |
-# =================================
+## Topology Violation Analysis: Python code for computating the number of polychian crossing. 
+## V. 1.1, 17 Oct 2016: Creat project, collecting XYZ coordinate & Calculate Dot product.
+## V. 1.2, 19 Dec 2016: Updated usage & User friendly interfaced.
+## V. 1.3, 23 Feb 2017: Speed up computation, combining two-code.
+## V. 2.1, 14 May 2017: Import necessary function, make it fast more & more
 
 import numpy as np
 import math
+import time
+import datetime
+
+print ("							\n\
+!           ==================================== 		\n\
+!           | The Topology Violation Analysis  | 		\n\
+!           ==================================== 		\n\
+! 								\n\
+! <> Written by Rangsiman Ketkaew 				\n\
+!    Student in Computational Chemistry 			\n\
+!    Computational Chemistry Research Unit (CCRU)               \n\
+!    Department of Chemistry, Faculty of Science and Technology \n\
+! 							        \n\
+! <> E-mail : rangsiman1993@gmail.com			        \n\
+!    Website: https://sites.google.com/site/compchem403/	\n\
+!")
+
+print "! Number of file that include coordinate of bead in XYZ format"
+N = int(input("! Enter Number of File: "))
+print "! Number of bead in your simulation system"
+B = int(input("! Enter Number of Bead: "))
 
 ## You can (must) change N and B to satify your computation (integer number)
 ## The name of coor file need to be in format of " step*.txt ", where * is start from 0, 1, 2, and so on.
@@ -18,10 +38,9 @@ import math
         # 4th column is the coor of particle on Z axis
         # 5th column is empty
 
-N = 10 # Number of coor file ## <--- Need to check before submit
-B = 2145 # Number of Bead/Molecule ## <--- Need to check before submit
-
 # ---------------------------------------------------------------------------------------------- #
+
+print "! Calculating the number of polymer chain crossing from your files ..."
 
 def findDist(x,y):
     delta = np.subtract(x,y)
@@ -83,12 +102,7 @@ while numFile < N :
     # update numFile (number of file data)
     numFile += 1
 
-print " ---- Wow, wait a minute ! ---- "
-
 ## Second job, dot product of two vectors and finding alpha (in degree unit)
-
-import numpy as np
-import math
 
 def findDist(v):
     v = [v[0]*v[0], v[1]*v[1], v[2]*v[2]]
@@ -163,6 +177,6 @@ while numFile < N :
 total = sum(sum_count)
 c.write("Total of Event = " "%s \n" % total)
 
-print " Total of Event = " "%s" % total
-print " ------ The Computation has Done: Normal termination ------ "
-print " ---------------------- See You Again --------------------- "
+print ""
+print "! ..... Total of Event = " "%s" " ....." % total
+print "! Normally Terminated on:", datetime.datetime.now()
