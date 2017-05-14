@@ -23,15 +23,18 @@ print ("							\n\
 !    Website: https://sites.google.com/site/compchem403/	\n\
 !")
 
-print "! Number of file that include coordinate of bead in XYZ format"
-N = int(input("! Enter Number of File: "))
-print "! Number of bead in your simulation system"
-B = int(input("! Enter Number of Bead: "))
+N=5 # Number of file start from step0.txt, step1.txt, ...
+B=200 # Number of bead of polymer in simulation system
+
+#print "! Number of file that include coordinate of bead in XYZ format"
+#N = int(input("! Enter Number of File: "))
+#print "! Number of bead in your simulation system"
+#B = int(input("! Enter Number of Bead: "))
 
 ## You can (must) change N and B to satify your computation (integer number)
-## The name of coor file need to be in format of "step*.txt", where * refers to the number of 
+## The name of coor file need to be in format of "step*.txt", where * refers to the number of
 ## successive file starts from 0, 1, 2, 3, ... till the last file.
-        # The general format of coor file contains 5 columns 
+        # The general format of coor file contains 5 columns
         # The example file can be found at /example/
         # 0th column is number of bead/molecule
         # 1st column is the number of polymer chain
