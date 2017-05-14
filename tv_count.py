@@ -1,4 +1,4 @@
-## Topology Violation Analysis: Python code for computating the number of polychian crossing. 
+## Topology Violation Analysis: Python code for calculating the number of polymer chian crossing.
 ## V. 1.1, 17 Oct 2016: Creat project, collecting XYZ coordinate & Calculate Dot product.
 ## V. 1.2, 19 Dec 2016: Updated usage & User friendly interfaced.
 ## V. 1.3, 23 Feb 2017: Speed up computation, combining two-code.
@@ -29,8 +29,10 @@ print "! Number of bead in your simulation system"
 B = int(input("! Enter Number of Bead: "))
 
 ## You can (must) change N and B to satify your computation (integer number)
-## The name of coor file need to be in format of " step*.txt ", where * is start from 0, 1, 2, and so on.
-        # The general format of coor file is  contains 5 column # You can see the example coor file in folder /example/
+## The name of coor file need to be in format of "step*.txt", where * refers to the number of 
+## successive file starts from 0, 1, 2, 3, ... till the last file.
+        # The general format of coor file contains 5 columns 
+        # The example file can be found at /example/
         # 0th column is number of bead/molecule
         # 1st column is the number of polymer chain
         # 2nd column is the coor of particle on X axis
@@ -60,7 +62,7 @@ while numFile < N :
 
     for line in f :
         v = line.split()
-        values = map(float,v[2:5])  # the position of X,Y,X coordinate # extract only the coor (xyz) in column 2nd-5th
+        values = map(float,v[2:5])  # extract only the coordinate in xyz from column 2nd-5th
         vector_list.append(values)
 
     # This line finished to read and store data to list.
@@ -96,7 +98,7 @@ while numFile < N :
 
             j += 1
         i += 1
-
+        
     g.close()
 
     # update numFile (number of file data)
@@ -133,7 +135,6 @@ while numFile < N :
         values = line.split(',')
         vect_2.append(values)
 
-
     i = 0
     count = 0
 
@@ -146,7 +147,6 @@ while numFile < N :
                 v1 = map(float, v1[0:3])
                 #print v1
                 dist_v1 = findDist(v1)
-
 
                 v2 = vect_2[j][1].split()
                 v2 = map(float, v2[0:3])
@@ -162,7 +162,7 @@ while numFile < N :
 
                 if deg >= 90 :
                     count += 1
-
+                
             j += 1
         i += 1
 
