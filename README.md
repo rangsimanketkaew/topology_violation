@@ -11,11 +11,11 @@ The remove_nLIne bash script is used to generate/adjust the format of xyz coordi
 I strongly stuggest you to study the topology violation and its concept first which help you to very fast to understand tv_counting clearly. </br>
 * **tv_counting:**
 
-Single core
+Serial run
 ```
 python tv_count.py
 ```
-Multicore
+Parallel run
 ```
 mpirun -np N python tv_count.py
 ```
