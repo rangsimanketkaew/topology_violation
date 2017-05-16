@@ -1,11 +1,11 @@
-# tv_counting
-tv_counting is a python code that used to be a post-analysis tool for polymer simulation by counting the number of event of polymer chain crossing (topology violation or TV) which have been simulated with the coarse-graining model. The script can be flexibly employed on interface with the general trajectory or dump files those are printed out by several molecular dynamics simulation programs such as Gromacs, Amber, and LAMMPS programs. As long as you have the typical coordinate of polymer in XYZ format, you could this script to analyse your polymeric system.
-
 # Coarse-graining model.
 Coarse grained simulation (CG) is one of the mesoscale simulation technique. The concept of CG is trying to reduce the degree of freedom of particle by grouping the fragment of molecule as an united atom (called bead). That means the million atoms in system will become to the new particles which has the degree of freedom lower than the old one. I strongly suggest you to read the definition of CG if you are interested in (https://en.wikipedia.org/wiki/Coarse-grained_modeling). This model is a promising technique that many computational chemists has waited. It is very fast more than Molecular Dynamics simulation, whereas provides the accurate results and reasonably compared to experimental evidence.
 
-# remove_nLine
-The remove_nLIne bash script is used to generate/adjust the format of xyz coordinate to suitably work with tv_count.py script afterward. Please be careful in using both of scripts, you can also learn what the proper format of coordinate by seeing test files in this repository.
+# tv_counting
+tv_counting is a python code that used to be a post-analysis tool for polymer simulation by counting the number of event of polymer chain crossing (topology violation or TV) which have been simulated with the coarse-graining model. The script can be flexibly employed on interface with the general trajectory or dump files those are printed out by several molecular dynamics simulation programs such as Gromacs, Amber, and LAMMPS programs. As long as you have the typical coordinate of polymer in XYZ format, you could this script to analyse your polymeric system.
+
+# Utility
+The other script is remov_nLine used for preparing the XYZ coordinate file (step#.txt) before using the tv_counting code. The remove_nLine bash script will generate and adjust the format of xyz coordinate at the same time. Both scripts should be carefully used. You can also learn the proper format of XYZ coordinate file by seeing the test files in this repository.
 
 # Usage
 ### tv_counting
