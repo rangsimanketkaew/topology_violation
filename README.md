@@ -8,8 +8,9 @@ Coarse grained simulation (CG) is one of the mesoscale simulation technique. The
 The remove_nLIne bash script is used to generate/adjust the format of xyz coordinate to suitably work with tv_count.py script afterward. Please be careful in using both of scripts, you can also learn what the proper format of coordinate by seeing test files in this repository.
 
 # Usage
+### tv_counting
 I strongly suggest you to use tv_count.py source code instead of running tv_count.exe becuase sometimes it has a problem with map function. By the way, before using my code, you are encouraged to know about the concept of topology violation first which will help you to quickly understand tv_counting clearly. </br>
-* **/src/tv_count.py:**
+* **/src/tv_count.py**
 
 Serial run
 ```
@@ -21,14 +22,21 @@ mpirun -np N python tv_count.py
 ```
 where N = number of CPUs
 
-* **remove_nLine:**
+* **tv_count.exe**
+```
+./tv_count.exe
+```
+
+### Utility
+
+* **/utility/remove_nLine**
 ```
 ./remove_nLine.sh
 ```
 
-* **tv_count.exe**
+* **/utility/tv_script.sh**
 ```
-./tv_count.exe
+./tv_script.sh
 ```
 
 ## Application
