@@ -20,5 +20,3 @@ wait
 sed -i 1,+2348d step*.txt
 
 echo ' --- Job done --- '
-
-
