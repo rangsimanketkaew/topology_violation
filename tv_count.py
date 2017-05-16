@@ -27,9 +27,9 @@ print ("							\n\
 N=5 # Number of file start from step0.txt, step1.txt, ...
 B=200 # Number of bead of polymer in simulation system
 
-#print "! Number of file that include coordinate of bead in XYZ format"
+#print ("! Number of file that include coordinate of bead in XYZ format")
 #N = int(input("! Enter Number of File: "))
-#print "! Number of bead in your simulation system"
+#print ("! Number of bead in your simulation system")
 #B = int(input("! Enter Number of Bead: "))
 
 ## You can (must) change N and B to satify your computation (integer number)
@@ -46,7 +46,7 @@ B=200 # Number of bead of polymer in simulation system
 
 # ---------------------------------------------------------------------------------------------- #
 
-print "! Calculating the number of polymer chain crossing from your files ..."
+print ("! Calculating the number of polymer chain crossing from your files ...")
 
 def findDist(x,y):
     delta = np.subtract(x,y)
@@ -181,6 +181,6 @@ while numFile < N :
 total = sum(sum_count)
 c.write("Total of Event = " "%s \n" % total)
 
-print ""
-print "! ..... Total of Event = " "%s" " ....." % total
-print "! Normally Terminated on:", datetime.datetime.now()
+print ("")
+print ("! ..... Total of Event = " "%s" " ....." % total)
+print ("! Normally Terminated on:"), datetime.datetime.now()
