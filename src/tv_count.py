@@ -1,4 +1,4 @@
-## Topology Violation Analysis: Python code for calculating the number of polymer chian crossing.
+## Topology Violation Analysis for Polymer: Python code for calculating the number of polymer chian crossing.
 ## V. 1.1, 17 Oct 2016: Creat project, collecting XYZ coordinate & Calculate Dot product.
 ## V. 1.2, 19 Dec 2016: Updated usage & User friendly interfaced.
 ## V. 1.3, 23 Feb 2017: Speed up computation, combining two-code.
