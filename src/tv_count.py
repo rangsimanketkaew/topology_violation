@@ -184,3 +184,5 @@ c.write("Total of Event = " "%s \n" % total)
 print ("")
 print ("! ..... Total of Event = " "%s" " ....." % total)
 print ("! Normally Terminated on:"), datetime.datetime.now()
+print ("")
+
