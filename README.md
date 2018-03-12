@@ -4,6 +4,9 @@ Coarse grained simulation (CG) is one of the mesoscale simulation technique. The
 # Topology Violation
 The topology violation (TV) is the event that occurs during coarse-grained simulation of polymer. We can investigate the TV by counting the number of chain crossing between polymer. The TV is a primary parameter for evaluating the coarse-grained simulation technique such as **Dissipative Particle Dynamics** (DPD). There is several research in use of DPD simulation to represent the polymer based on bead-bead spring interaction instead of atomistic model.
 
+## Application
+Simulating the polymer to be consistent with the real physical properties of polymer is very important. One of the problematic issue is topology violation, which generally uccurs during simulation. [Goujon *et al.*](https://aip.scitation.org/doi/10.1063/1.2954022) studied topology violation and develop the technique to reduces number of polymer chain crossing event. Then, (Sirk *et al.*)[http://dx.doi.org/10.1063/1.3698476] reported the modified Segmental Repulsive Potential (mSRP) used with DPD simulation, DPD/mSRP. I personally suggest LAMMPS manual for more practical details of DPD simulation and mSRP technique. We used DPD/mSRP to study the entanglement of polymer and compared with experimental result ((Ketkaew and Tantirunfrotechai *Macromol. Theory Simul.* **2018**, 1700093)[http://onlinelibrary.wiley.com/doi/10.1002/mats.201700093/abstract]).
+
 # tv_counting
 tv_counting is a python code used to compute the number of chain crossing between polymer. This code is designed to work with the coarse-graining simulation. It means that, **as long as you have a typical cartesian (XYZ) coordinate of a bead/particle of polymer chain, you can use this code to compute the topology violation events.** Additionally, tv_counting can be flexibly employed on interfacing with the general trajectory files since those are printed out by simulation using the general molecular dynamics simulation programs such as Gromacs, Amber, and LAMMPS.
 
@@ -45,8 +48,6 @@ where N = number of CPUs
 ./tv_script.sh
 ```
 
-## Application
-You can find the application of topology violation analysis in the research article of THE JOURNAL OF CHEMICAL PHYSICS136, 134903 (2012) published by Timothy W Sirk et al. [http://dx.doi.org/10.1063/1.3698476]. Moreover, I personally suggest you to read LAMMPS manual about Dissipative Particle Dynamics (DPD) model and Segmental Repulsive Potential (SRP), these are the well-known and widely used coarse grained simulation.
 
 ## Motivation of Project
 2016 Thailand Computational Chemistry Challenge by UBE.
