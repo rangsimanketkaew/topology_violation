@@ -5,10 +5,13 @@ Coarse grained simulation (CG) is one of the mesoscale simulation technique. The
 The topology violation (TV) is the event that occurs during coarse-grained simulation of polymer. We can investigate the TV by counting the number of chain crossing between polymer. The TV is a primary parameter for evaluating the coarse-grained simulation technique such as **Dissipative Particle Dynamics** (DPD). There is several research in use of DPD simulation to represent the polymer based on bead-bead spring interaction instead of atomistic model.
 
 # tv_counting
-tv_counting is a python code used to compute the number of chain crossing between polymer. The code is designed to work with the coarse-graining simulation. It means that, **as long as you have the typical XYZ coordinate of bead of monomer in polymer chain, you can this code to analyse your polymer simulation.** Additionally, tv_counting can be flexibly employed on interfacing with the general trajectory files since those are printed out by molecular dynamics simulation programs such as Gromacs, Amber, and LAMMPS. 
+tv_counting is a python code used to compute the number of chain crossing between polymer. This code is designed to work with the coarse-graining simulation. It means that, **as long as you have a typical cartesian (XYZ) coordinate of a bead/particle of polymer chain, you can use this code to compute the topology violation events.** Additionally, tv_counting can be flexibly employed on interfacing with the general trajectory files since those are printed out by simulation using the general molecular dynamics simulation programs such as Gromacs, Amber, and LAMMPS.
 
 # Utility
-The other script is remov_nLine used for preparing the XYZ coordinate file (step#.txt) before using the tv_counting code. The remove_nLine bash script will generate and adjust the format of xyz coordinate at the same time. Both scripts should be carefully used. You can also learn the proper format of XYZ coordinate file by seeing the test files in this repository.
+#### **remov_nLine** 
+remov_nLine bash script can be used to prepare the XYZ coordinate file for tv_counting. It will create the file called *step#.txt* from the raw output file of molecular simulation. Again, remove_nLine can generate and adjust the format of coordinate of bead in simulated system to be cartesian (XYZ) coordinate at the same time. 
+#### tv_script.sh
+This shell script is used to run the tv_counting.py and arrange the output from analysis. Both scripts should be carefully used. You can also learn the proper format of XYZ coordinate file by seeing [the test files](https://github.com/rangsimanketkaew/tv_counting/tree/master/test) in this repository.
 
 # Usage
 ### tv_counting
