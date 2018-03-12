@@ -4,7 +4,7 @@ Coarse grained simulation (CG) is one of the mesoscale simulation techniques and
 # Topology Violation
 The topology violation (TV) is the event that occurs during coarse-grained simulation of soft matter such as polymer. One can determine TV by counting the number of chain crossing between polymer. The TV is a primary parameter for evaluating the coarse-grained simulation technique such as **Dissipative Particle Dynamics** (DPD). There is several research in use of DPD simulation for modelling the polymer composite based on bead-bead spring interaction instead of atomistic model.
 
-## Application
+# Application
 Simulating the polymer to be consistent with the real physical properties of polymer is very important. One of the problematic issue is topology violation, which generally uccurs during simulation. [Goujon *et al.*](https://aip.scitation.org/doi/10.1063/1.2954022) studied topology violation and develop the technique to reduces number of polymer chain crossing event. [Sirk *et al.*](http://dx.doi.org/10.1063/1.3698476) reported the modified Segmental Repulsive Potential (mSRP) used with DPD simulation, DPD/mSRP. They also evaluate the performance of mSRP and reported the optimized parameter. [Ketkaew and Tantirungrotechai](http://onlinelibrary.wiley.com/doi/10.1002/mats.201700093/abstract) We used DPD and DPD/mSRP to study the entanglement of polyisoprene nanocomposite and studied the mechanical properties of polymer. I personally suggest LAMMPS manual for more practical details of DPD simulation and mSRP technique.
 
 # tv_counting
