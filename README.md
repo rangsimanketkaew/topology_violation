@@ -3,8 +3,8 @@ tv_counting is a python code used to compute the number of chain crossing betwee
 
 ---
 
-# Coarse-graining model.
-Coarse grained simulation (CG) is one of the mesoscale simulation techniques and widely used in the present. The concept of CG is reducing the degree of freedom in calculation by grouping the atoms or fragment of molecule as an **united atom** (so called *bead*). CG also yeild the level of resolution of simulation at larger time and scale. More details of definition of CG can be found at (https://en.wikipedia.org/wiki/Coarse-grained_modeling). This model is a promising technique that many computational chemists has waited. It is very fast more than molecular dynamics (MD) simulation, whereas provides the accurate results and reasonably compared to experiments.
+# Coarse-Graining Modeling
+Coarse-grained modeling (CG) is one of the mesoscale simulation technique that widely used in the computational chemistry and biology. A simple concept of CG is reducing the degree of freedom in calculation by grouping the atoms or fragment of molecule as an **united atom** (so called *bead*). CG also yeild the level of resolution of simulation at larger time and scale. More details of definition of CG can be found at (https://en.wikipedia.org/wiki/Coarse-grained_modeling). This model is a promising technique that many computational chemists has waited. It is very fast more than molecular dynamics (MD) simulation, whereas provides the accurate results and reasonably compared to experiments.
 
 # Topology Violation in Polymer Simulation
 The topology violation (TV) is the event that occurs during coarse-grained simulation of soft matter such as polymer. One can determine TV by counting the number of chain crossing between polymer. The TV is a primary parameter for evaluating the coarse-grained simulation technique such as **Dissipative Particle Dynamics** (DPD). There is several research in use of DPD simulation for modelling the polymer composite based on bead-bead spring interaction instead of atomistic model.
