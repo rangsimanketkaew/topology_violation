@@ -1,8 +1,8 @@
 # Coarse-graining model.
-Coarse grained simulation (CG) is one of the mesoscale simulation technique. The concept of CG is trying to reduce the degree of freedom of particle by grouping the fragment of molecule as an united atom (called **bead**). That means the million atoms in system will become to the new particles which has the degree of freedom lower than the old one. I strongly suggest you to read the definition of CG if you are interested in (https://en.wikipedia.org/wiki/Coarse-grained_modeling). This model is a promising technique that many computational chemists has waited. It is very fast more than Molecular Dynamics simulation, whereas provides the accurate results and reasonably compared to experimental evidence.
+Coarse grained simulation (CG) is one of the mesoscale simulation techniques and widely used in the present. The concept of CG is reducing the degree of freedom in calculation by grouping the atoms or fragment of molecule as an **united atom** (so called *bead*). CG also yeild the level of resolution of simulation at larger time and scale. More details of definition of CG can be found at (https://en.wikipedia.org/wiki/Coarse-grained_modeling). This model is a promising technique that many computational chemists has waited. It is very fast more than molecular dynamics (MD) simulation, whereas provides the accurate results and reasonably compared to experiments.
 
 # Topology Violation
-The topology violation (TV) is the event that occurs during coarse-grained simulation of polymer. We can investigate the TV by counting the number of chain crossing between polymer. The TV is a primary parameter for evaluating the coarse-grained simulation technique such as **Dissipative Particle Dynamics** (DPD). There is several research in use of DPD simulation to represent the polymer based on bead-bead spring interaction instead of atomistic model.
+The topology violation (TV) is the event that occurs during coarse-grained simulation of soft matter such as polymer. One can determine TV by counting the number of chain crossing between polymer. The TV is a primary parameter for evaluating the coarse-grained simulation technique such as **Dissipative Particle Dynamics** (DPD). There is several research in use of DPD simulation for modelling the polymer composite based on bead-bead spring interaction instead of atomistic model.
 
 ## Application
 Simulating the polymer to be consistent with the real physical properties of polymer is very important. One of the problematic issue is topology violation, which generally uccurs during simulation. [Goujon *et al.*](https://aip.scitation.org/doi/10.1063/1.2954022) studied topology violation and develop the technique to reduces number of polymer chain crossing event. [Sirk *et al.*](http://dx.doi.org/10.1063/1.3698476) reported the modified Segmental Repulsive Potential (mSRP) used with DPD simulation, DPD/mSRP. They also evaluate the performance of mSRP and reported the optimized parameter. [Ketkaew and Tantirungrotechai](http://onlinelibrary.wiley.com/doi/10.1002/mats.201700093/abstract) We used DPD and DPD/mSRP to study the entanglement of polyisoprene nanocomposite and studied the mechanical properties of polymer. I personally suggest LAMMPS manual for more practical details of DPD simulation and mSRP technique.
@@ -18,7 +18,7 @@ This shell script is used to run the tv_counting.py and arrange the output from 
 
 # Usage
 ### tv_counting
-I strongly suggest you to use tv_count.py source code instead of running tv_count.exe becuase sometimes it has a problem with map function. By the way, before using my code, you are encouraged to know about the concept of topology violation first which will help you to quickly understand tv_counting clearly. </br>
+I strongly prefer to use tv_count.py source code instead of running tv_count.exe (executable file) becuase sometimes it has a problem with map function in python. You are encouraged to know the concept of topology violation, which will help you to quickly understand tv_counting clearly. </br>
 * **/src/tv_count.py**
 
 Serial run
@@ -48,9 +48,8 @@ where N = number of CPUs
 ./tv_script.sh
 ```
 
-
 ## Motivation of Project
 2016 Thailand Computational Chemistry Challenge by UBE.
 
 ## Contact info
-Please send your question or comment ot suggestion to me by rangsiman1993(at)gmail.com or visit https://nuttvichakarn.wordpress.com/ and https://sites.google.com/site/compchem403/home
+Please send your question or comment or suggestion to me by rangsiman1993(at)gmail.com or visit https://nuttvichakarn.wordpress.com/ and https://sites.google.com/site/compchem403/home
