@@ -10,6 +10,8 @@ Simulating the polymer to be consistent with the real physical properties of pol
 # tv_counting
 tv_counting is a python code used to compute the number of chain crossing between polymer. This code is designed to work with the coarse-graining simulation. It means that, **as long as you have a typical cartesian (XYZ) coordinate of a bead/particle of polymer chain, you can use this code to compute the topology violation events.** Additionally, tv_counting can be flexibly employed on interfacing with the general trajectory files since those are printed out by simulation using the general molecular dynamics simulation programs such as Gromacs, Amber, and LAMMPS.
 
+---
+
 # Utility
 #### **remov_nLine** 
 remov_nLine bash script can be used to prepare the XYZ coordinate file for tv_counting. It will create the file called *step#.txt* from the raw output file of molecular simulation. Again, remove_nLine can generate and adjust the format of coordinate of bead in simulated system to be cartesian (XYZ) coordinate at the same time. 
