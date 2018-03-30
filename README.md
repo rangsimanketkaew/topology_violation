@@ -1,5 +1,5 @@
 # tv_counting
-tv_counting is a python program designed to compute the number of chain crossing between polymer. This code is designed to work with the coarse-graining simulation. It means that, **as long as you have a typical cartesian (XYZ) coordinate of a bead/particle of polymer chain, you can use this code to compute the topology violation events.** Additionally, tv_counting can be flexibly employed on interfacing with the general trajectory files since those are printed out by simulation using the general molecular dynamics simulation programs such as Gromacs, Amber, and LAMMPS.
+tv_counting is a python program designed to compute the number of chain crossing between polymer. This code is designed to work with the coarse-graining simulation. It means that, as long as you have a typical cartesian (XYZ) coordinate of a bead/particle of polymer chain, you can use this code to compute the topology violation events. Additionally, tv_counting can be flexibly employed on interfacing with the general trajectory files since those are printed out by simulation using the general molecular dynamics simulation programs such as Gromacs, Amber, and LAMMPS.
 
 ---
 
