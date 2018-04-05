@@ -57,4 +57,4 @@ This shell script is used to run the tv_counting.py and arrange the output from 
  
 # Author
 - Rangsiman Ketkaew
-- If having question or comment or suggestion, send to me via rangsiman1993(at)gmail.com or rangsiman_k@sci.tu.ac.th or visit [https://sites.google.com/site/rangsiman1993/](https://sites.google.com/site/rangsiman1993/) and [https://sites.google.com/site/rangsiman1993/](https://sites.google.com/site/rangsiman1993/)
+- If having question or comment or suggestion, send to me via rangsiman1993(at)gmail.com or rangsiman_k@sci.tu.ac.th or visit [https://sites.google.com/site/rangsiman1993/](https://sites.google.com/site/rangsiman1993/) and [https://sites.google.com/site/compchem403/](https://sites.google.com/site/compchem403/)
