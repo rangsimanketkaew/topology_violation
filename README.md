@@ -34,7 +34,7 @@ where N = number of CPUs
 ./tv_count.exe
 ```
 
-## Utility
+## Utilities
 
 #### **remov_nLine** 
 remov_nLine bash script can be used to prepare the XYZ coordinate file for tv_counting. It will create the file called *step#.txt* from the raw output file of molecular simulation. Again, remove_nLine can generate and adjust the format of coordinate of bead in simulated system to be cartesian (XYZ) coordinate at the same time. 
