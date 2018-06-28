@@ -1,8 +1,6 @@
 ## tv_counting
 tv_counting is a python program designed to compute the number of chain crossing between polymer. This code is designed to work with the coarse-graining simulation. It means that, as long as you have a typical cartesian (XYZ) coordinate of a bead/particle of polymer chain, you can use this code to compute the topology violation events. Additionally, tv_counting can be flexibly employed on interfacing with the general trajectory files since those are printed out by simulation using the general molecular dynamics simulation programs such as Gromacs, Amber, and LAMMPS.
 
----
-
 ## Coarse-Grained Modeling
 Coarse-grained modeling (CG) is one of the mesoscale simulation technique that widely used in the computational chemistry and biology. A simple concept of CG is reducing the degree of freedom in calculation by grouping the atoms or fragment of molecule as an **united atom** (so called *bead*). CG also yeild the level of resolution of simulation at larger time and scale. More details of definition of CG can be found at (https://en.wikipedia.org/wiki/Coarse-grained_modeling). This model is a promising technique that many computational chemists has waited. It is very fast more than molecular dynamics (MD) simulation, whereas provides the accurate results and reasonably compared to experiments.
 
@@ -11,8 +9,6 @@ The topology violation (TV) is the event that occurs during coarse-grained simul
 
 ## Application to DPD simulation
 Simulating the polymer to be consistent with the real physical properties of polymer is very important. One of the problematic issue is topology violation, which generally uccurs during simulation. [Goujon *et al.*](https://aip.scitation.org/doi/10.1063/1.2954022) studied topology violation and develop the technique to reduces number of polymer chain crossing event. [Sirk *et al.*](http://dx.doi.org/10.1063/1.3698476) reported the modified Segmental Repulsive Potential (mSRP) used with DPD simulation, DPD/mSRP. They also evaluate the performance of mSRP and reported the optimized parameter. [Ketkaew and Tantirungrotechai](http://onlinelibrary.wiley.com/doi/10.1002/mats.201700093/abstract) used the DPD and DPD/mSRP simulations to study the polyisoprene (natural rubber) entanglement. I personally suggest the LAMMPS manual for more practical details of [DPD simulation](http://lammps.sandia.gov/doc/pair_dpd.html) and [mSRP technique](http://lammps.sandia.gov/doc/pair_srp.html).
-
----
 
 ## Usage
 ### tv_counting
