@@ -46,10 +46,8 @@ This shell script is used to run the tv_counting.py and arrange the output from 
 ./tv_script.sh
 ```
 
----
-
 ## Motivation of Project
-2016 Thailand Computational Chemistry Challenge by UBE. ([see details](https://sites.google.com/site/compchem403/event-news/compchem403-ceremony-tccc-ube-paccon2016))
+2016 Thailand Computational Chemistry Challenge by UBE. (https://sites.google.com/site/compchem403/event-news/compchem403-ceremony-tccc-ube-paccon2016)
  
 ## Author
 - Rangsiman Ketkaew
