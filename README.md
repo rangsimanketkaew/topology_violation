@@ -10,11 +10,11 @@ The topology violation (TV) is the event that occurs during coarse-grained simul
 ## Application to DPD simulation
 Simulating the polymer to be consistent with the real physical properties of polymer is very important. One of the problematic issue is topology violation, which generally uccurs during simulation. [Goujon *et al.*](https://aip.scitation.org/doi/10.1063/1.2954022) studied topology violation and develop the technique to reduces number of polymer chain crossing event. [Sirk *et al.*](http://dx.doi.org/10.1063/1.3698476) reported the modified Segmental Repulsive Potential (mSRP) used with DPD simulation, DPD/mSRP. They also evaluate the performance of mSRP and reported the optimized parameter. [Ketkaew and Tantirungrotechai](http://onlinelibrary.wiley.com/doi/10.1002/mats.201700093/abstract) used the DPD and DPD/mSRP simulations to study the polyisoprene (natural rubber) entanglement. I personally suggest the LAMMPS manual for more practical details of [DPD simulation](http://lammps.sandia.gov/doc/pair_dpd.html) and [mSRP technique](http://lammps.sandia.gov/doc/pair_srp.html).
 
-## Usage
-### tv_counting
-I strongly prefer to use tv_count.py source code instead of running tv_count.exe (executable file) becuase the latter sometimes has a problem with map function in python. You are also expected to understand the concept of coarse-grained modelling and topology violation in polymer simulation before using tv_counting code. </br>
+## Normal Usage
+#### tv_count.py and tv_count.exe
+I strongly prefer to use tv_count.py source code rather than tv_count.exe becuase the latter sometimes has a problem with map function in python. You are also expected to understand the concept of coarse-grained modelling and topology violation in polymer simulation before using tv_counting code. </br>
 
-Execute program using python interpreter </br>
+**Execute program using python interpreter** </br>
 Source code is available at
 ```
 /src/tv_count.py
@@ -30,30 +30,32 @@ mpirun -np N python tv_count.py
 ```
 where N = number of CPUs
 
-Execute program using compiled file.
-* **tv_count.exe**
+**Execute program using compiled file**
 ```
 ./tv_count.exe
 ```
 
-### Utilities
+## Utilities
 
 #### **remov_nLine.sh** 
-remov_nLine bash script can be used to prepare the XYZ coordinate file for tv_counting. It will create the file called *step#.txt* from the raw output file of molecular simulation. Again, remove_nLine can generate and adjust the format of coordinate of bead in simulated system to be cartesian (XYZ) coordinate at the same time. 
+remov_nLine bash script is used to create a suitable XYZ coordinate file for tv_counting program. It will create the file called *step#.txt* from the raw output or trajectory file printed by molecular dynamics program you use. You can see a example of a suitable XYZ coordinate by with this [test files](https://github.com/rangsimanketkaew/tv_counting/tree/master/test).
+
 * **/utility/remove_nLine**
 ```
 ./remove_nLine.sh
 ```
 
 #### tv_script.sh
-This shell script is used to run the tv_counting.py and arrange the output from analysis. Both scripts should be carefully used. You can also learn the proper format of XYZ coordinate file by seeing [the test files](https://github.com/rangsimanketkaew/tv_counting/tree/master/test) in this repository.
+tv_script.sh is used to run tv_counting.py and save the analysis output. Use this script to help you to manage tv_counting calculation when you have a ton of coordinate input files.
+
 * **/utility/tv_script.sh**
 ```
 ./tv_script.sh
 ```
 
 ## Motivation of Project
-2016 Thailand Computational Chemistry Challenge by UBE. (https://sites.google.com/site/compchem403/event-news/compchem403-ceremony-tccc-ube-paccon2016)
+- 2016 Thailand Computational Chemistry Challenge by UBE. 
+- https://sites.google.com/site/compchem403/event-news/compchem403-ceremony-tccc-ube-paccon2016
  
 ## Author
 - Rangsiman Ketkaew, Thammasat University, Thailand.
