@@ -6,56 +6,39 @@
 				 	 
                        https://github.com/rangsimanketkaew/tv_counting/
 			
- --------------------------------------------------------------------------------------------
-
- ============
- | Preamble |
- ============
-     tv_counting: an automated python program for topology violation analysis, writen by 
- Rangsiman Ketkaew, student in physical chemistry at Computational Chemistry Research Unit 
- (CCRU), Thammasat University, Pathum Thani, 12120 Thailand.
- 
- --------------------------------------------------------------------------------------------
+     tv_counting is an automated python program for topology violation analysis, writen in
+ python 2.7 by Rangsiman Ketkaew (BSc student in Chemistry) at Department of Chemistry 
+ Facultyof Science and Technology, Thammasat University, Pathum Thani, 12120 Thailand.
  
  ===============
  | tv_counting |
  ===============
-     "Polymer Structure Analysis Tool": tv_counting is a python code that used to be a post-
- analysis tool for polymer simulation by counting the number of event of polymer chain 
- crossing (topology violation or TV) which have been simulated with the coarse-graining model. 
- The script can be flexibly employed on interface with the general trajectory or dump files 
- those are printed out by several molecular dynamics simulation programs such as Gromacs, 
- Amber, and LAMMPS programs. As long as you have the typical coordinate of polymer in XYZ 
- format, you could this script to analyse polymeric system.
+     tv_counting, written in python 2.7, is a program for computing the number of chain 
+ crossing between polymer chains - topology violation of polymeric system - in multi-scale 
+ simulation. tv_counting can be used as a post-analysis with molecular dynamics program 
+ such as Gromacs, Amber, and LAMMPS.
 
- --------------------------------------------------------------------------------------------
- 
  =========================
  | Coarse-graining model |
  =========================
-     Coarse grained simulation (CG) is one of the mesoscale simulation technique. The concept 
- of CG is trying to reduce the degree of freedom of particle by grouping the fragment of 
- molecule as an united atom (called bead). That means the million atoms in system will become 
- to the new particles which has the degree of freedom lower than the old one. I also strongly 
- suggest you to read the definition of CG if you are interested in wikipedia. This model is a 
- promising  technique that many computational chemists has waited. It is fast more than 
- Molecular Dynamics simulation, whereas provides the accurate results and reasonably compared 
- to experimental evidence.    
- 
- --------------------------------------------------------------------------------------------
+    Coarse-grained (CG) modelling is one of the meso-scale simulation technique that widely 
+ used in computational chemistry and biology. A concept of CG is reduction of the degree of 
+ freedom in simulated system by replacing atoms in molecule by a chunk called bead. 
+ CG modelling yeilds the resolution of simulation at larger time and scale. More details of 
+ CG modelling can be found at (https://en.wikipedia.org/wiki/Coarse-grained_modeling). 
+ This model is a promising technique that many computational chemists has waited. 
+ It can be said that CG is faster than a classical molecular dynamics (MD) simulation, 
+ and still provides the accurate and reasonable results compared to experiments.   
  
  ===========
- | Warning |
+ | Caveats |
  ===========
-   (1) tv_counting should be run on LINUX operating system, such as CentOS or Ubuntu which 
-       installed Python 2.6 or 2.7. However, for using the program on Window OS, Cygwin can 
-       be used as a Linux-like terminal, but the computation of topology violation would 
-       consume your PC/laptop performance quite a lot.
+   (1) tv_counting should be run on LINUX OS, such as CentOS or Ubuntu and must be run with 
+       Python 2.6 or 2.7. If you run tv_counting on Cygwin LINUX-like terminal for Window OS,
+       Computation can consume a lot of PC/laptop power.
    (2) I suggest you to run the tv_count.py program in serial first in order to benchmark the
        computational performance of program on your machine before running the real system.
-       If serial run is too slow, you can use MPI or OpenMPI for parallel method.
-
- --------------------------------------------------------------------------------------------
+       If serial run is too slow, then you can switch to use MPI for parallel run.
 
  =================
  | Program Usage |
@@ -94,7 +77,7 @@
 
    Note that '&' is needed to force program run in background.
  
- --------------------------------------------------------------------------------------------
+   Enjoy your calculation.
  
    Rangsiman Ketkaew
     < E-mail: rangsiman1993@gmail.com
