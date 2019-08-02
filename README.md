@@ -1,5 +1,5 @@
 ## tv_counting
-tv_counting, written in python 2.7, is a program for computing the number of chain crossing between polymer chains - topology violation of polymeric system - in multi-scale simulation. tv_counting can be used as a post-analysis with molecular dynamics program such as Gromacs, Amber, and LAMMPS.
+tv_counting is a Python program for computing the number of chain crossing between polymer chains - topology violation of polymeric system - in multi-scale simulation. tv_counting can be used as a post-analysis with molecular dynamics program such as Gromacs, Amber, and LAMMPS.
 
 ## Coarse-Grained Modeling
 Coarse-grained (CG) modelling is one of the meso-scale simulation technique that widely used in computational chemistry and biology. A concept of CG is reduction of the degree of freedom in simulated system by replacing atoms in molecule by a chunk called **bead**. CG modelling yeilds the resolution of simulation at larger time and scale. More details of CG modelling can be found at (https://en.wikipedia.org/wiki/Coarse-grained_modeling). This model is a promising technique that many computational chemists has waited. It can be said that CG is faster than a classical molecular dynamics (MD) simulation, and still provides the accurate and reasonable results compared to experiments.
